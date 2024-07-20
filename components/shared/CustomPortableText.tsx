@@ -20,6 +20,12 @@ export function CustomPortableText({
       normal: ({ children }) => {
         return <p className={paragraphClasses}>{children}</p>
       },
+      h1:({children})=><h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">{children}</h2>,
+      h2:({children})=><h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">{children}</h2>,
+      h3:({children})=><h3 className="text-xl font-bold tracking-tight md:text-2xl">{children}</h3>,
+      blockquote:({children})=><blockquote className={`${paragraphClasses} border-l pl-3 italic`}>{children}</blockquote>
+
+
     },
     marks: {
       link: ({ children, value }) => {
@@ -33,6 +39,7 @@ export function CustomPortableText({
           </a>
         )
       },
+      // strong:({children})=><strong className="font-bold">{children}</strong>
     },
     types: {
       image: ({
